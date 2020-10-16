@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
+import {Link} from "react-router-dom";
 
 const Signup = () => {
     return ( 
@@ -39,7 +40,10 @@ const Signup = () => {
         </div>
         <div className="buttons">
           <MDBBtn className="signup-button" color="danger">Register</MDBBtn>
-          <MDBBtn className="signup-button" color="info">Login</MDBBtn>
+          {/* <Link to="/login"><MDBBtn className="signup-button" color="info">Login</MDBBtn></Link> */}
+        </div>
+        <div className="login-route">
+          <p>Already have an account ? <Link to="/login"><sapn className="log">Login</sapn></Link></p>
         </div>
       </form>
     </MDBCol>

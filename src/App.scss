@@ -27,7 +27,8 @@
 }
 .signup-button {
   font-size: 20px !important;
-  letter-spacing: 0.15rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 0.02rem;
 }
 .md-form input[type="text"]:not(.browser-default) {
   border-bottom: 1px solid black !important;
@@ -70,15 +71,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #304352; /* fallback for old browsers */
+  background: #8e9eab; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to left,
-    #d7d2cc,
-    #304352
+    #eef2f3,
+    #8e9eab
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #d7d2cc,
-    #304352
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to left, #eef2f3, #8e9eab);
+}
+.login-button {
+  font-size: 20px !important;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.login-route {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: black;
+  font-size: large;
+  font-weight: 100;
+}
+.log {
+  color: blue;
+  font-weight: 500;
+  font-family: cursive;
 }

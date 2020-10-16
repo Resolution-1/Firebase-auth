@@ -2,11 +2,14 @@ import React from "react";
 import Signup from "./components/Signup";
 import "./App.scss";
 import Login from "./components/Login";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    // <Login></Login>
-    <Signup></Signup>
+    <Router>
+      <Route path="/" exact component={Signup}></Route>
+      <Route path="/login" exact component={Login}></Route>
+    </Router>
   );
 };
 
