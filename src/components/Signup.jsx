@@ -8,7 +8,7 @@ const Signup = () => {
 <MDBContainer>
   <MDBRow>
     <MDBCol md="6">
-      <form>
+      <form className="needs-validation" noValidate>
         <p className="h5 text-center mb-4">SIGN-UP</p>
         <div className="grey-text">
           <MDBInput
@@ -17,8 +17,9 @@ const Signup = () => {
             group
             type="text"
             validate
-            error="wrong"
+            error="true"
             success="right"
+            required
           />
           <MDBInput
             label="Your email"
@@ -28,6 +29,7 @@ const Signup = () => {
             validate
             error="wrong"
             success="right"
+            required
           />
 
           <MDBInput
@@ -36,11 +38,11 @@ const Signup = () => {
             group
             type="password"
             validate
+            required
           />
         </div>
         <div className="buttons">
           <MDBBtn className="signup-button" color="danger">Register</MDBBtn>
-          {/* <Link to="/login"><MDBBtn className="signup-button" color="info">Login</MDBBtn></Link> */}
         </div>
         <div className="login-route">
           <p>Already have an account ? <Link to="/login"><sapn className="log">Login</sapn></Link></p>

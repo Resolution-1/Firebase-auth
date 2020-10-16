@@ -3,6 +3,7 @@ import Signup from "./components/Signup";
 import "./App.scss";
 import Login from "./components/Login";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import fire from "./config/fire";
 
 const App = () => {
   return (

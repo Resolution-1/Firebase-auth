@@ -8,15 +8,15 @@ return (
   <MDBRow>
     <MDBCol md="6">
       <form>
-        <p className="h5 text-center mb-4">LOGIN</p>
+        <p className="h5 text-center mb-4">SIGN-IN</p>
         <div className="grey-text">
           <MDBInput className="login-text" label="Type your email" icon="envelope" group type="email" validate error="wrong"
             success="right" />
           <MDBInput className="login-text" label="Type your password" icon="lock" group type="password" validate />
         </div>
         <div className="text-center">
-          <MDBBtn className="login-button">Login</MDBBtn>
-          <Link to="/"><MDBBtn className="signup-button" color="info">Register</MDBBtn></Link>
+          <MDBBtn className="login-button">Sign in</MDBBtn>
+          {/* <Link to="/"><MDBBtn className="signup-button" color="info">Register</MDBBtn></Link> */}
         </div>
       </form>
     </MDBCol>
