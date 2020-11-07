@@ -1,18 +1,30 @@
-import React from "react";
+import React,{useState} from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
 import {Link} from "react-router-dom";
 
+
+
+
 const Signup = () => {
+
+  const [name,setName] = useState("Enter Name");
+  const [email,setEmail]=useState("Enter Email");
+  const [password,setPassword]=useState("Enter Password");
+  const handleSubmit = ()=> {
+  
+  }
+  
+
     return ( 
         <div className="container-fluid sign-up">
 <MDBContainer>
   <MDBRow>
     <MDBCol md="6">
-      <form className="needs-validation" noValidate>
+      <form  className="needs-validation" noValidate>
         <p className="h5 text-center mb-4">SIGN-UP</p>
         <div className="grey-text">
           <MDBInput
-            label="Your name"
+            label={name}
             icon="user"
             group
             type="text"
@@ -22,7 +34,7 @@ const Signup = () => {
             required
           />
           <MDBInput
-            label="Your email"
+            label={email}
             icon="envelope"
             group
             type="email"
@@ -33,7 +45,7 @@ const Signup = () => {
           />
 
           <MDBInput
-            label="Your password"
+            label={password}
             icon="lock"
             group
             type="password"
@@ -42,7 +54,7 @@ const Signup = () => {
           />
         </div>
         <div className="buttons">
-          <MDBBtn className="signup-button" color="danger">Register</MDBBtn>
+          <MDBBtn onSubmit={handleSubmit} className="signup-button" color="danger">Register</MDBBtn>
         </div>
         <div className="login-route">
           <p>Already have an account ? <Link to="/login"><sapn className="log">Login</sapn></Link></p>
