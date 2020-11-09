@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Signup from "./components/Signup";
 import "./App.scss";
 import Login from "./components/Login";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import fire from "./config/fire";
 
 const App = () => {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [emailError, setEmailError] = useState("");
+  const [emailError, setEmailError] = useState("Email is wrong");
   const [passwordError, setPasswordError] = useState("");
-  const [hasAccount, setHasAccout] = useState(false);
+  const [hasAccount, setHasAccount] = useState(false);
 
   const handleLogin = () => {
     fire
@@ -62,11 +60,44 @@ const App = () => {
     });
   };
 
+  useEffect(() => {
+    authListner();
+  }, []);
+
   return (
-    <Router>
-      <Route path="/" exact component={Signup}></Route>
-      <Route path="/login" exact component={Login}></Route>
-    </Router>
+    <Login
+      email={email}
+      setEmail={setEmail}
+      password={password}
+      setPassword={setPassword}
+      handleLogin={handleLogin}
+      handleSignup={handleSignup}
+      hasAccount={hasAccount}
+      setHasAccount={setHasAccount}
+      emailError={emailError}
+      passwordError={passwordError}
+    />
+    // <Signup />
+    // <Router>
+    //   <Route
+    //     path="/"
+    //     exact
+    //     render={() => (
+    //       <Login
+    //         email={email}
+    //         setEmail={setEmail}
+    //         password={password}
+    //         setPassword={setPassword}
+    //         handleLogin={handleLogin}
+    //         handleSignup={handleSignup}
+    //         hasAccount={hasAccount}
+    //         setHasAccount={setHasAccount}
+    //         emailError={emailError}
+    //         passwordError={passwordError}
+    //       />
+    //     )}
+    //   ></Route>
+    // </Router>
   );
 };
 

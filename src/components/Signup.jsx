@@ -1,19 +1,17 @@
 import React,{useState} from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
 import {Link} from "react-router-dom";
-
-
+import validator from "validator"
 
 
 const Signup = () => {
 
-  const [name,setName] = useState("Enter Name");
-  const [email,setEmail]=useState("Enter Email");
-  const [password,setPassword]=useState("Enter Password");
+  const [name,setName] = useState()
+  const [email,setEmail]=useState()
+  const [password,setPassword]=useState()
   const handleSubmit = ()=> {
-  
+
   }
-  
 
     return ( 
         <div className="container-fluid sign-up">
@@ -24,7 +22,7 @@ const Signup = () => {
         <p className="h5 text-center mb-4">SIGN-UP</p>
         <div className="grey-text">
           <MDBInput
-            label={name}
+            label="Enter name"
             icon="user"
             group
             type="text"
@@ -33,19 +31,11 @@ const Signup = () => {
             success="right"
             required
           />
-          <MDBInput
-            label={email}
-            icon="envelope"
-            group
-            type="email"
-            validate
-            error="wrong"
-            success="right"
-            required
-          />
+          <MDBInput className="login-text" label="Enter email"   icon="envelope" group type="email" validate error="wrong"
+            success="right" />
 
           <MDBInput
-            label={password}
+            label="Enter password"
             icon="lock"
             group
             type="password"
@@ -54,7 +44,7 @@ const Signup = () => {
           />
         </div>
         <div className="buttons">
-          <MDBBtn onSubmit={handleSubmit} className="signup-button" color="danger">Register</MDBBtn>
+          <MDBBtn type="submit" onSubmit={handleSubmit} className="signup-button" color="danger">Register</MDBBtn>
         </div>
         <div className="login-route">
           <p>Already have an account ? <Link to="/login"><sapn className="log">Login</sapn></Link></p>
