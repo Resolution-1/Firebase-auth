@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.scss";
+import "./App.css";
 import Login from "./components/Login";
 import fire from "./config/fire";
 
@@ -77,27 +77,6 @@ const App = () => {
       emailError={emailError}
       passwordError={passwordError}
     />
-    // <Signup />
-    // <Router>
-    //   <Route
-    //     path="/"
-    //     exact
-    //     render={() => (
-    //       <Login
-    //         email={email}
-    //         setEmail={setEmail}
-    //         password={password}
-    //         setPassword={setPassword}
-    //         handleLogin={handleLogin}
-    //         handleSignup={handleSignup}
-    //         hasAccount={hasAccount}
-    //         setHasAccount={setHasAccount}
-    //         emailError={emailError}
-    //         passwordError={passwordError}
-    //       />
-    //     )}
-    //   ></Route>
-    // </Router>
   );
 };
 
