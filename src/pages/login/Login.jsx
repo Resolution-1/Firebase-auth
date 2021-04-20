@@ -52,7 +52,7 @@ const Login = () => {
               </h2>
               {error && (
                 <div class="alert alert-danger" role="alert">
-                  Failed to Create an Account
+                  Failed to Login
                 </div>
               )}
               <form
